@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kalyan Business House",
-  description: "Welcome to Kalyan Business House",
+  title: "Shreya Maheshwari",
+  description: "Shreya's Portfolio",
 };
 
 export default function RootLayout({
