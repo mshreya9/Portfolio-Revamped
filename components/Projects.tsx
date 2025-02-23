@@ -63,30 +63,48 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:shadow-lg hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-300 h-[470px]"
+              className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group border border-gray-200 hover:border-indigo-500"
             >
               <div className="p-6 h-full flex flex-col">
-                <h3 className="text-xl font-bold text-indigo-700 dark:text-indigo-500 mb-3 text-center">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-auto text-justify">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm font-medium"
+                <h3 className="text-xl font-bold text-indigo-600 mb-3">{project.title}</h3>
+                <p className="text-gray-600 mb-6 flex-grow">{project.description}</p>
+                
+                <div className="space-y-4">
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span 
+                        key={techIndex}
+                        className="px-3 py-1 text-sm font-medium bg-gray-100 text-gray-700 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Link */}
+                  <Link 
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium group-hover:translate-x-2 transition-transform duration-200"
+                  >
+                    View Project 
+                    <svg 
+                      className="ml-2 w-4 h-4" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
                     >
-                      {tech}
-                    </span>
-                  ))}
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </Link>
                 </div>
-                <Link 
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 group"
-                >
-                  View Project 
-                  <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </Link>
               </div>
             </div>
           ))}
