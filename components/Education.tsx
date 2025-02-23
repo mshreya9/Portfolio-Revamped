@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const educationData = [
   {
@@ -10,10 +11,9 @@ const educationData = [
     institution: "BITS School of Management",
     location: "Mumbai, India",
     description: "MBA Leadership and Strategy",
-    grade: "CGPA: 9.00",
-    achievements: [
-      
-    ]
+    // grade: "CGPA: 9.00",
+    achievements: [],
+    logo: "/education/bitsom.png"
   },
   {
     year: "2018 - 2022",
@@ -25,7 +25,8 @@ const educationData = [
     achievements: [
       "Winner of 2 International and 5 National Hackathons",
       "Achiever Award Holder"
-    ]
+    ],
+    logo: "/education/vit.png"
   },
   {
     year: "2016 - 2017",
@@ -34,8 +35,8 @@ const educationData = [
     location: "Kota, Rajasthan",
     description: "Science Stream (PCM)",
     grade: "Percentage: 92.2%",
-    achievements: [
-    ]
+    achievements: [],
+    logo: "/education/stjoseph.png"
   },
 ];
 
@@ -73,26 +74,40 @@ const Education: React.FC = () => {
 
                 {/* Content */}
                 <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
-                  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold text-indigo-600 bg-indigo-50 mb-4">
-                      {entry.year}
-                    </span>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{entry.degree}</h3>
-                    <h4 className="text-lg font-semibold text-gray-700 mb-1">{entry.institution}</h4>
-                    <p className="text-gray-600 mb-2">{entry.location}</p>
-                    <p className="text-gray-600 mb-2">{entry.description}</p>
-                    <p className="text-indigo-600 font-medium mb-4">{entry.grade}</p>
-                    
-                    {entry.achievements.length > 0 && (
-                      <div>
-                        <h5 className="text-sm font-semibold text-gray-900 mb-2">Key Achievements:</h5>
-                        <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
-                          {entry.achievements.map((achievement, i) => (
-                            <li key={i}>{achievement}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow relative">
+                    <div className="absolute top-6 right-6 hidden md:block">
+                      {entry.logo && (
+                        <div className="relative w-[105px] h-[112px] overflow-hidden">
+                          <Image
+                            src={entry.logo}
+                            alt={`${entry.institution} logo`}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold text-indigo-600 bg-indigo-50 mb-4">
+                        {entry.year}
+                      </span>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{entry.degree}</h3>
+                      <h4 className="text-lg font-semibold text-gray-700 mb-1">{entry.institution}</h4>
+                      <p className="text-gray-600 mb-2">{entry.location}</p>
+                      <p className="text-gray-600 mb-2">{entry.description}</p>
+                      <p className="text-indigo-600 font-medium mb-4">{entry.grade}</p>
+                      
+                      {entry.achievements.length > 0 && (
+                        <div>
+                          <h5 className="text-sm font-semibold text-gray-900 mb-2">Key Achievements:</h5>
+                          <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+                            {entry.achievements.map((achievement, i) => (
+                              <li key={i}>{achievement}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>

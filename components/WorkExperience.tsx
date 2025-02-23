@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const experienceData = [
   {
@@ -14,9 +15,11 @@ const experienceData = [
       "Led UI design and development, owning new features and ensuring mobile-responsive, user-friendly interfaces",
       "Enhanced accessibility using screen readers for seamless navigation by visually impaired users",
       "Managed API development, service upgrades to more efficient versions, and ongoing maintenance.",
-      "Utilized AWS certification to migrate applications to AWS, focusing on S3"
+      "Utilized AWS certification to migrate applications to AWS, focusing on S3",
+      "I served as one of four SEP Engineer Committee Leads, leading initiatives to empower engineers"
     ],
-    technologies: ["JavaScript", "HTML5", "CSS3", "AEM", "Java", "SpringBoot", "AWS"],
+    technologies: ["JavaScript", "HTML5", "CSS3", "AEM", "Java", "SpringBoot", "AWS", "Leadership", "Communication"],
+    logo: "/workexp/jpmc.jpg",
   },
   {
     role: "Software Engineer Intern",
@@ -30,6 +33,7 @@ const experienceData = [
       "Made the UI responsive, improving design and usability for a key service",
     ],
     technologies: ["JavaScript", "HTML5", "CSS3", "Java", "SpringBoot", "Bash"],
+    logo: "/workexp/jpmc.jpg",
   },
   {
     role: "Software Engineer Intern",
@@ -41,7 +45,8 @@ const experienceData = [
       "Gained hands-on experience with Microsoft Azure through training and practical use",
       "Worked on an insurance case management app in Optum's clinical portfolio",
     ],
-    technologies: ["Microsoft Azure", "NodeJs"],
+    technologies: ["Microsoft Azure", "NodeJs", "ExpressJS"],
+    logo: "/workexp/optum-uhg.png",
   },
 ];
 
@@ -79,10 +84,24 @@ const Experience: React.FC = () => {
 
                 {/* Content */}
                 <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
-                  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+                  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 relative">
+                    {/* Company Logo - Desktop only */}
+                    <div className="absolute top-6 right-6 hidden lg:block">
+                      {experience.logo && (
+                        <div className="relative w-24 h-24 rounded-full overflow-hidden">
+                          <Image
+                            src={experience.logo}
+                            alt={`${experience.company} logo`}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      )}
+                    </div>
+
                     {/* Role & Duration */}
-                    <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
-                      <h3 className="text-xl font-bold text-gray-900">{experience.role}</h3>
+                    <div className="mb-4">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{experience.role}</h3>
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-50 text-indigo-600">
                         {experience.duration}
                       </span>
