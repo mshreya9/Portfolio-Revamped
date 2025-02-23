@@ -40,7 +40,7 @@ const projects: Project[] = [
     technologies: ["HTML5", "CSS3", "JavaScript", "MongoDB", "NodeJS", "ExpressJs", "Bootstrap", "slanglabs.in"],
   },
   {
-    title: "Java-DSA",
+    title: "Java for DSA",
     description: "A comprehensive guide to Data Structures and Algorithms for internships and placements, covering core concepts, detailed explanations, practical examples, and handwritten notes to enhance understanding and excel in technical interviews.",
     link: "https://github.com/mshreya9/Java-DSA",
     technologies: ["Java", "Data Structures", "Algorithms", "Interview Preparation", "OOPS", "Leetcode", "Hackerrank"],
@@ -49,7 +49,7 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
