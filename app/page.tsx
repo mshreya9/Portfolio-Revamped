@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Education from "@/components/Education";
 import Experience from "@/components/WorkExperience"; 
 import Projects from "@/components/Projects";
+import Achievements from "@/components/Achievements";
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
@@ -9,6 +10,7 @@ export default function Home() {
       <Education />
       <Experience />
       <Projects />
+      <Achievements />
     </main>
   );
 }

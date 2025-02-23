@@ -130,7 +130,7 @@ const Experience: React.FC = () => {
                           <svg className="w-4 h-4 mt-1.5 mr-2 text-indigo-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
-                          <span className="text-gray-600">{point}</span>
+                          <span className="text-gray-600 text-justify">{point}</span>
                         </li>
                       ))}
                     </ul>

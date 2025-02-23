@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Link from 'next/link';
 
@@ -67,7 +68,7 @@ const Projects = () => {
             >
               <div className="p-6 h-full flex flex-col">
                 <h3 className="text-xl font-bold text-indigo-600 mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-6 flex-grow">{project.description}</p>
+                <p className="text-gray-600 mb-6 flex-grow text-justify">{project.description}</p>
                 
                 <div className="space-y-4">
                   {/* Technologies */}
