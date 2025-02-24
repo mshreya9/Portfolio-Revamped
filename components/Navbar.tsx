@@ -12,8 +12,12 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo/Brand Name */}
           <div className="flex-shrink-0">
-            <Link href="#hero" className="text-xl font-bold text-gray-800">
-              SHREYA
+            <Link 
+              href="#hero" 
+              className="text-xl font-bold"
+            >
+              <span className="text-gray-800">SHREYA </span>
+              <span className="text-indigo-600">M.</span>
             </Link>
           </div>
 
@@ -21,42 +25,42 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex md:items-center md:space-x-8">
             <Link 
               href="#about"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               href="#education"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Education
             </Link>
             <Link 
               href="#workexp"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Work Experience
             </Link>
             <Link 
               href="#projects"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Projects
             </Link>
             <Link 
               href="#achievements"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Achievements
             </Link>
             <Link 
               href="#contact"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
