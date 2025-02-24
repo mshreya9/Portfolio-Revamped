@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-gradient-to-br from-white to-indigo-50">
+    <section id="about" className="pt-32 pb-12 bg-gradient-to-br from-white to-indigo-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -41,14 +41,11 @@ const About: React.FC = () => {
             {/* Content Column */}
             <div className="lg:w-2/3 space-y-8">
               <div className="space-y-6 text-lg text-gray-600">
-                <p className="text-xl leading-relaxed text-justify">
-                  <span className="text-indigo-600 font-semibold">Hello!</span> I'm Shreya Maheshwari, a passionate software developer with a keen eye for 
-                  creating elegant solutions. I specialize in building modern web applications that 
-                  prioritize user experience and performance.
+                <p className="text-lg leading-relaxed text-justify">
+                  <span className="text-indigo-600 font-semibold">Hello!</span> I'm Shreya Maheshwari, a software engineer passionate about building impactful and user-friendly digital solutions. With a strong foundation in frontend development, I specialize in creating accessible, responsive, and visually appealing interfaces. My journey has been shaped by hackathons, leadership roles, and community-driven initiatives, where I've honed my problem-solving and teamwork skills.
                 </p>
-                <p className="text-xl leading-relaxed text-justify">
-                  With a strong foundation in both frontend and backend technologies, I enjoy 
-                  turning complex problems into simple, beautiful, and intuitive designs.
+                <p className="text-lg leading-relaxed text-justify">
+                Currently, I am preparing for my next challenge as an MBA candidate at BITSoM, where I aim to bridge technology and business for meaningful impact.
                 </p>
               </div>
 
@@ -65,7 +62,7 @@ const About: React.FC = () => {
                     </span>
                     <div>
                       <h3 className="font-semibold text-gray-900">Experience</h3>
-                      <p className="text-sm text-gray-600">3 Years in Tech</p>
+                      <p className="text-sm text-gray-600">3+ Years in Tech</p>
                     </div>
                   </div>
                 </div>
@@ -88,7 +85,7 @@ const About: React.FC = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="pt-6">
+              <div className="pt-4">
                 <a 
                   href="#contact" 
                   className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-indigo-600 rounded-full hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg"

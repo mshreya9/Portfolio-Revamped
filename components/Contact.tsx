@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      url: 'www.linkedin.com/in/mshreya9',
+      url: 'https://www.linkedin.com/in/mshreya9/',
       icon: <FaLinkedin className="w-6 h-6" />,
     },
     {
