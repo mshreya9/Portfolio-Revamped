@@ -85,7 +85,7 @@ const About: React.FC = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="pt-4">
+              <div className="pt-2 flex justify-center lg:justify-start">
                 <a 
                   href="#contact" 
                   className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-indigo-600 rounded-full hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg"

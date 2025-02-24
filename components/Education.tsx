@@ -75,7 +75,7 @@ const Education: React.FC = () => {
                 {/* Content */}
                 <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
                   <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow relative">
-                    <div className="absolute top-6 right-6 hidden md:block">
+                    <div className="absolute top-6 right-6 hidden lg:block">
                       {entry.logo && (
                         <div className="relative w-[105px] h-[112px] overflow-hidden">
                           <Image

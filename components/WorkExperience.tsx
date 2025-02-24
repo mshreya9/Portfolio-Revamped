@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const experienceData = [
   {
-    role: "Software Development Engineer II",
+    role: "Software Engineer II",
     company: "JPMorgan Chase & Co.",
     location: "Bangalore, Karnataka, India",
     duration: "July 2022 - Present",
