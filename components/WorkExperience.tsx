@@ -25,7 +25,7 @@ const experienceData = [
     role: "Software Engineer Intern",
     company: "JPMorgan Chase & Co.",
     location: "Bangalore, Karnataka, India",
-    duration: "Jan 2022 - Jun 2021",
+    duration: "Jan 2022 - Jun 2022",
     type: "Internship",
     description: [
       "Automated bi-monthly build and release process for 23 services, saving 200+ minutes monthly.",
@@ -75,7 +75,6 @@ const Experience: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                viewport={{ once: true }}
                 className={`relative flex flex-col md:flex-row gap-4 md:gap-8 items-start 
                   ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
               >

@@ -106,12 +106,17 @@ const Achievements: React.FC = () => {
     <section id="achievements" className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             My <span className="text-indigo-600">Achievements</span>
           </h2>
           <div className="h-1 w-20 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
-        </div>
+        </motion.div>
 
         {/* Achievements Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -121,7 +126,6 @@ const Achievements: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group border border-gray-200 hover:border-indigo-500"
             >
               <div className="p-6 h-full flex flex-col">

@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaGlobe, FaUserGraduate, FaHandHoldingHeart, FaHospital } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 interface Project {
   title: string;
@@ -34,7 +35,7 @@ const projects: Project[] = [
   },
   {
     title: "Pragati",
-    description: "Pragati is an online platform that empowers underdeveloped but talented women to earn and become financially independent by selling authentic self-made products and providing reliable services on the go. The portal also features Women in News, an Ask Desk section for guidance and support, and an emergency SOS service.",
+    description: "Pragati is an online platform that empowers underdeveloped yet talented women to earn and become financially independent by selling authentic self-made products and providing reliable services on the go. The portal also features Women in News, an Ask Desk section for guidance and support, and an emergency SOS service.",
     link: "https://devfolio.co/projects/pragati-progress-begins-at-home-9220",
     technologies: ["HTML5", "CSS3", "JavaScript", "MongoDB", "NodeJS", "ExpressJs", "Sentiment Analysis", "Social Good"],
     type: "social good"
@@ -69,22 +70,30 @@ const projects: Project[] = [
   },
 ];
 
-const Projects = () => {
+const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             My <span className="text-indigo-600">Projects</span>
           </h2>
           <div className="h-1 w-20 bg-indigo-600 mx-auto mt-4 rounded-full"></div>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
+            <motion.div 
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group border border-gray-200 hover:border-indigo-500"
             >
               <div className="p-6 h-full flex flex-col">
@@ -136,7 +145,7 @@ const Projects = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
