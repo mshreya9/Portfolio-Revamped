@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaTrophy, FaCode, FaGraduationCap, FaAward, FaMedal } from 'react-icons/fa';
+import { FaTrophy, FaGraduationCap, FaAward, FaMedal } from 'react-icons/fa';
 
 interface Achievement {
   title: string;

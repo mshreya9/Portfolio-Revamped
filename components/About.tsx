@@ -42,7 +42,7 @@ const About: React.FC = () => {
             <div className="lg:w-2/3 space-y-8">
               <div className="space-y-6 text-lg text-gray-600">
                 <p className="text-lg leading-relaxed text-justify">
-                  <span className="text-indigo-600 font-semibold">Hello!</span> I'm Shreya Maheshwari, a software engineer passionate about building impactful and user-friendly digital solutions. With a strong foundation in frontend development, I specialize in creating accessible, responsive, and visually appealing interfaces. My journey has been shaped by hackathons, leadership roles, and community-driven initiatives, where I've honed my problem-solving and teamwork skills.
+                  <span className="text-indigo-600 font-semibold">Hello!</span> I&apos;m Shreya Maheshwari, a software engineer passionate about building impactful and user-friendly digital solutions. With a strong foundation in frontend development, I specialize in creating accessible, responsive, and visually appealing interfaces. My journey has been shaped by hackathons, leadership roles, and community-driven initiatives, where I&apos;ve honed my problem-solving and teamwork skills.
                 </p>
                 <p className="text-lg leading-relaxed text-justify">
                 Currently, I am preparing for my next challenge as an MBA candidate at BITSoM, where I aim to bridge technology and business for meaningful impact.
@@ -90,7 +90,7 @@ const About: React.FC = () => {
                   href="#contact" 
                   className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-indigo-600 rounded-full hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg"
                 >
-                  Let's Connect
+                  Let&apos;s Connect
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
