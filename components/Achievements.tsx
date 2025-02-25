@@ -87,7 +87,7 @@ const achievements: Achievement[] = [
   },
   {
     title: "1st Prize (Champion) at HackNagpur",
-    description: "We built our project, <a href='#projects' class='italic text-indigo-600 hover:underline'>Pragati</a>, at HackNagpur, Central India’s largest community-driven hackathon, organized by GDG Nagpur and 20+ other communities. Our team secured the 1st place, earning an exclusive GitHub bag and other goodies.",
+    description: "We built our project, <a href='#projects' class='italic text-indigo-600 hover:underline'>Pragati</a>, at HackNagpur, Central India's largest community-driven hackathon, organized by GDG Nagpur and 20+ other communities. Our team secured the 1st place, earning an exclusive GitHub bag and other goodies.",
     category: "Hackathon",
     date: "December 2020",
     certificateLink: "https://drive.google.com/file/d/1YagOOziNGlkkCnWN6OioXdg2464ryWep/view?usp=sharing"
